@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -8,19 +8,157 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <!-- CSS -->
+    <link rel="stylsheet" href="css/main.css">
+
+    <title>Zodiac Website2</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <!-- HTML -->
+  <body background="images/IMG_0090.jpg">
+ 
+    <!-- <h1>Zodiac website</h1> -->
+        
+     
 
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <!-- <form>
+      <input id= "zodiac">
+      <button type= "button" onclick="getInfo()"> < </button>
+     </form> -->
+
+     
+   <!-- CSS -->
+
+    <style>
+      body {
+          text-align: center;
+          background-size: cover;
+          background-color: black;
+          color: white;
+         }
+      img {
+          width: 90vw;
+         }
+
+      input {
+          width: 150px;
+         }
+
+      button, input {
+           overflow: visible;
+         }
+        h1 {
+          
+          position: absolute;
+          top: 10px;
+          right: 45%;
+        }
+        p {
+
+          position: absolute;
+          bottom: 10px;
+          right: 25%;
+        }
+
     
-    <!-- bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  </style>
+   
+   <!-- JavaScript -->
+
+   <!-- looping through an array -->
+
+  <script>
+      
+      var zodiac = [
+      {
+        name: "aries",
+        traits: "Confident and optimistic, but short-tempered and impulsive Mar 21-Apr 19"
+      },
+      {
+        name: "taurus",
+        traits: "Reliable, practical, and Stubborn, uncompromising Apr 20-May 20"
+      },
+      {
+        name: "gemini",
+        traits: "Adaptable, quick learner, and Nervous, indecisive May 21-June 20"
+      },
+       {
+        name: "cancer",
+        traits: "Tenacious,loyal,and Moody, insecure June 21-July 22"
+      },
+      {
+        name: "leo",
+        traits: "Creative, warm-hearted, and Arrogant, self-centered July 23-Aug 22"
+      },
+      {
+        name: "virgo",
+        traits: "Loyal, practical, and Critical, shyness Aug 23-Sep 22"
+      },
+      {
+        name: "libra",
+        traits:"Cooperative, gracious, and Indecisive, Sep 23-Oct 22"
+      },
+      {
+        name: "scorpio",
+        traits: "Resourceful, passionate, and Jealous, secretive Oct 23-Nov 21"
+      },
+      {
+        name: "sagitarius",
+        traits: "Generous, idealistic, and Impatient, Nov 22- Dec 21"
+      },
+      {
+        name: "capricorn",
+        traits: "Responsible, disciplined, and unforgiving, condescending Dec 22-Jan 19"
+      },
+      {
+        name: "aquarius",
+        traits: "Progressive and independent, but temperamental, Jan 20-Feb18."
+      },
+      {
+        name: "pisces",
+        traits: "Compassionate, artistic, and Fearful, overly trusting Feb 19-Mar 20"
+      },
+      ]
+
+     /* function getIndex (zodiacSign) {
+        for (let i = 0; i < zodiacLength; i ++) {
+          if (input == zodiac [i]) return;
+        }
+      }
+      */
+     
+    /* for (const i = 0; < const.length = i++) 
+     {
+      text <= zodiac [i] + ("name" + "traits");
+
+     }
+    */
+    //console.log(zodiac[0].name)
+    //console.log(zodiac[0].traits)
+
+    /*function getInfo() {
+      const name = document.getElementById("name").value
+      const traits = document.getElementById("traits").value*/
+
+      var userName = prompt("What is your zodiac sign?")
+
+
+    for(var i = 0; i < zodiac.length; i++) {
+      if (userName.toLowerCase() === zodiac[i].name) {
+        document.write("<h1>" + zodiac[i].name + "</h1>" + "<p>" + zodiac[i].traits + "</p>" );
+         }
+      }
+      /*if (name == zodiac[i].name && traits == zodiac[i].traits)*/ 
+       /* console.log(zodiac[i].make + "," + zodiac[i].traits)*/
+       /*console.log("name" + "traits") 
+       document.write("name" + "traits")
+
+      }
+    }*/
+
+  </script> 
+
+    <!-- javascript -->
+     <script src="js/main.js"></script>
   </body>
 </html>
